@@ -1,0 +1,17 @@
+{
+    "name": "agendarentrega/client-php",
+    "description": "PHP Client AgendarEntrega",
+    "homepage": "https://github.com/agendarentrega/client-php",
+    "license": "proprietary",
+    "authors": [],
+    "require": {
+        "php": ">=5.5",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": { "AgendarEntrega\\" : "lib/AgendarEntrega/" }
+    }
+}
