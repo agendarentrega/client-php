@@ -57,7 +57,8 @@ class ApiStatusEntidadeResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ativo' => 'bool'
+        'ativo' => 'bool',
+        'importacaoAtiva' => 'bool'
     ];
 
     /**
@@ -66,7 +67,8 @@ class ApiStatusEntidadeResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'ativo' => 'boolean'
+        'ativo' => 'boolean',
+        'importacaoAtiva' => 'boolean'
     ];
 
     /**
@@ -96,7 +98,8 @@ class ApiStatusEntidadeResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'ativo' => 'ativo'
+        'ativo' => 'ativo',
+        'importacaoAtiva' => 'importacaoAtiva'
     ];
 
     /**
@@ -105,7 +108,8 @@ class ApiStatusEntidadeResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'ativo' => 'setAtivo'
+        'ativo' => 'setAtivo',
+        'importacaoAtiva' => 'setImportacaoAtiva'
     ];
 
     /**
@@ -114,7 +118,8 @@ class ApiStatusEntidadeResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'ativo' => 'getAtivo'
+        'ativo' => 'getAtivo',
+        'importacaoAtiva' => 'getImportacaoAtiva'
     ];
 
     /**
@@ -178,6 +183,7 @@ class ApiStatusEntidadeResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['ativo'] = isset($data['ativo']) ? $data['ativo'] : null;
+        $this->container['importacaoAtiva'] = isset($data['importacaoAtiva']) ? $data['importacaoAtiva'] : null;
     }
 
     /**
@@ -224,6 +230,30 @@ class ApiStatusEntidadeResponse implements ModelInterface, ArrayAccess
     public function setAtivo($ativo)
     {
         $this->container['ativo'] = $ativo;
+
+        return $this;
+    }
+
+    /**
+     * Gets importacaoAtiva
+     *
+     * @return bool
+     */
+    public function getImportacaoAtiva()
+    {
+        return $this->container['importacaoAtiva'];
+    }
+
+    /**
+     * Sets importacaoAtiva
+     *
+     * @param bool $importacaoAtiva importacaoAtiva
+     *
+     * @return $this
+     */
+    public function setImportacaoAtiva($importacaoAtiva)
+    {
+        $this->container['importacaoAtiva'] = $importacaoAtiva;
 
         return $this;
     }
