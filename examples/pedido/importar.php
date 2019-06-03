@@ -32,7 +32,7 @@ try {
     $result = $client->pedido()->importarPedido($request);
     print_r($result);
 
-    $client->pedido()->alterarStatusPedido('82745886000167', 'PEDIDO-1',
+    $client->pedido()->alterarStatusPedido('11111111000100', 'PEDIDO-1',
         (new AgendarEntrega\Pedido\Model\ApiAlterarStatusPedidoRequest())->setStatus(StatusPedido::CONCLUIDO));
 } catch (AgendarEntrega\Pedido\ApiException $e) {
     var_dump($e->getMessage());
