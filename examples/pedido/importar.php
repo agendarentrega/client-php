@@ -2,10 +2,10 @@
 
 require_once __DIR__ . "/../client.php";
 
-use \AgendarEntrega\Pedido\Model\ApiStatusPedido as StatusPedido;
+use \AgendarEntrega\Pedido\Model\PedidoStatusPedido as StatusPedido;
 
 try {
-    $request = new AgendarEntrega\Pedido\Model\ApiImportarPedidoRequest([
+    $request = new AgendarEntrega\Pedido\Model\PedidoImportarPedidoRequest([
         'codigo' => 'PEDIDO-1',
         'comprador' => [
             'email' => 'comprador@teste.com',
@@ -27,13 +27,13 @@ try {
         ],
         'dataEmissao' => '2019-06-05 08:08',
         'observacoes' => 'Observações gerais existentes no pedido',
-        'status' => StatusPedido::EM_ABERTO,
+        'status' => StatusPedido::PEDIDO_EM_ABERTO,
     ]);
     $result = $client->pedido()->importarPedido($request);
     print_r($result);
 
     $client->pedido()->alterarStatusPedido('11111111000100', 'PEDIDO-1',
-        (new AgendarEntrega\Pedido\Model\ApiAlterarStatusPedidoRequest())->setStatus(StatusPedido::CONCLUIDO));
+        (new AgendarEntrega\Pedido\Model\PedidoAlterarStatusPedidoRequest())->setStatus(StatusPedido::PEDIDO_CONCLUIDO));
 } catch (AgendarEntrega\Pedido\ApiException $e) {
     var_dump($e->getMessage());
     var_dump(json_decode($e->getResponseBody()));
