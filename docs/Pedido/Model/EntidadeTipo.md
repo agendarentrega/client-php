@@ -1,4 +1,4 @@
-# EntidadeTipoPessoa
+# EntidadeTipo
 
 ## Properties
 Name | Type | Description | Notes

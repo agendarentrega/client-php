@@ -1,6 +1,6 @@
 <?php
 /**
- * ImportarPedidoRequestComprador
+ * PedidoAlterarStatusPedidoResponse
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \AgendarEntrega\Pedido\ObjectSerializer;
 
 /**
- * ImportarPedidoRequestComprador Class Doc Comment
+ * PedidoAlterarStatusPedidoResponse Class Doc Comment
  *
  * @category Class
  * @package  AgendarEntrega\Pedido
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ImportarPedidoRequestComprador implements ModelInterface, ArrayAccess
+class PedidoAlterarStatusPedidoResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ImportarPedidoRequestComprador implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ImportarPedidoRequestComprador';
+    protected static $swaggerModelName = 'pedidoAlterarStatusPedidoResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,7 @@ class ImportarPedidoRequestComprador implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email' => 'string',
-        'nome' => 'string',
-        'sobrenome' => 'string'
+        
     ];
 
     /**
@@ -68,9 +66,7 @@ class ImportarPedidoRequestComprador implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'email' => null,
-        'nome' => null,
-        'sobrenome' => null
+        
     ];
 
     /**
@@ -100,9 +96,7 @@ class ImportarPedidoRequestComprador implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'email' => 'email',
-        'nome' => 'nome',
-        'sobrenome' => 'sobrenome'
+        
     ];
 
     /**
@@ -111,9 +105,7 @@ class ImportarPedidoRequestComprador implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'email' => 'setEmail',
-        'nome' => 'setNome',
-        'sobrenome' => 'setSobrenome'
+        
     ];
 
     /**
@@ -122,9 +114,7 @@ class ImportarPedidoRequestComprador implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'email' => 'getEmail',
-        'nome' => 'getNome',
-        'sobrenome' => 'getSobrenome'
+        
     ];
 
     /**
@@ -187,9 +177,6 @@ class ImportarPedidoRequestComprador implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['nome'] = isset($data['nome']) ? $data['nome'] : null;
-        $this->container['sobrenome'] = isset($data['sobrenome']) ? $data['sobrenome'] : null;
     }
 
     /**
@@ -215,78 +202,6 @@ class ImportarPedidoRequestComprador implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets email
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     *
-     * @param string $email email
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets nome
-     *
-     * @return string
-     */
-    public function getNome()
-    {
-        return $this->container['nome'];
-    }
-
-    /**
-     * Sets nome
-     *
-     * @param string $nome nome
-     *
-     * @return $this
-     */
-    public function setNome($nome)
-    {
-        $this->container['nome'] = $nome;
-
-        return $this;
-    }
-
-    /**
-     * Gets sobrenome
-     *
-     * @return string
-     */
-    public function getSobrenome()
-    {
-        return $this->container['sobrenome'];
-    }
-
-    /**
-     * Sets sobrenome
-     *
-     * @param string $sobrenome sobrenome
-     *
-     * @return $this
-     */
-    public function setSobrenome($sobrenome)
-    {
-        $this->container['sobrenome'] = $sobrenome;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      *

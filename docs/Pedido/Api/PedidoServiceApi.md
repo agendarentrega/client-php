@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **alterarStatusPedido**
-> \AgendarEntrega\Pedido\Model\ApiAlterarStatusPedidoResponse alterarStatusPedido($cnpjEmitente, $codigo, $body)
+> \AgendarEntrega\Pedido\Model\PedidoAlterarStatusPedidoResponse alterarStatusPedido($cnpjEmitente, $codigo, $body)
 
 
 
@@ -31,7 +31,7 @@ $apiInstance = new AgendarEntrega\Pedido\Api\PedidoServiceApi(
 );
 $cnpjEmitente = "cnpjEmitente_example"; // string | 
 $codigo = "codigo_example"; // string | 
-$body = new \AgendarEntrega\Pedido\Model\ApiAlterarStatusPedidoRequest(); // \AgendarEntrega\Pedido\Model\ApiAlterarStatusPedidoRequest | 
+$body = new \AgendarEntrega\Pedido\Model\PedidoAlterarStatusPedidoRequest(); // \AgendarEntrega\Pedido\Model\PedidoAlterarStatusPedidoRequest | 
 
 try {
     $result = $apiInstance->alterarStatusPedido($cnpjEmitente, $codigo, $body);
@@ -48,11 +48,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cnpjEmitente** | **string**|  |
  **codigo** | **string**|  |
- **body** | [**\AgendarEntrega\Pedido\Model\ApiAlterarStatusPedidoRequest**](../Model/ApiAlterarStatusPedidoRequest.md)|  |
+ **body** | [**\AgendarEntrega\Pedido\Model\PedidoAlterarStatusPedidoRequest**](../Model/PedidoAlterarStatusPedidoRequest.md)|  |
 
 ### Return type
 
-[**\AgendarEntrega\Pedido\Model\ApiAlterarStatusPedidoResponse**](../Model/ApiAlterarStatusPedidoResponse.md)
+[**\AgendarEntrega\Pedido\Model\PedidoAlterarStatusPedidoResponse**](../Model/PedidoAlterarStatusPedidoResponse.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **importarPedido**
-> \AgendarEntrega\Pedido\Model\ApiImportarPedidoResponse importarPedido($body)
+> \AgendarEntrega\Pedido\Model\PedidoImportarPedidoResponse importarPedido($body)
 
 
 
@@ -86,7 +86,7 @@ $apiInstance = new AgendarEntrega\Pedido\Api\PedidoServiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \AgendarEntrega\Pedido\Model\ApiImportarPedidoRequest(); // \AgendarEntrega\Pedido\Model\ApiImportarPedidoRequest | 
+$body = new \AgendarEntrega\Pedido\Model\PedidoImportarPedidoRequest(); // \AgendarEntrega\Pedido\Model\PedidoImportarPedidoRequest | 
 
 try {
     $result = $apiInstance->importarPedido($body);
@@ -101,11 +101,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AgendarEntrega\Pedido\Model\ApiImportarPedidoRequest**](../Model/ApiImportarPedidoRequest.md)|  |
+ **body** | [**\AgendarEntrega\Pedido\Model\PedidoImportarPedidoRequest**](../Model/PedidoImportarPedidoRequest.md)|  |
 
 ### Return type
 
-[**\AgendarEntrega\Pedido\Model\ApiImportarPedidoResponse**](../Model/ApiImportarPedidoResponse.md)
+[**\AgendarEntrega\Pedido\Model\PedidoImportarPedidoResponse**](../Model/PedidoImportarPedidoResponse.md)
 
 ### Authorization
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **statusEntidade**
-> \AgendarEntrega\Pedido\Model\ApiStatusEntidadeResponse statusEntidade($entidadeUUID)
+> \AgendarEntrega\Pedido\Model\PedidoStatusEntidadeResponse statusEntidade($entidadeUUID)
 
 
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\AgendarEntrega\Pedido\Model\ApiStatusEntidadeResponse**](../Model/ApiStatusEntidadeResponse.md)
+[**\AgendarEntrega\Pedido\Model\PedidoStatusEntidadeResponse**](../Model/PedidoStatusEntidadeResponse.md)
 
 ### Authorization
 

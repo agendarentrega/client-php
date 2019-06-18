@@ -1,6 +1,6 @@
 <?php
 /**
- * AccountUser
+ * PedidoImportarPedidoRequest
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \AgendarEntrega\Pedido\ObjectSerializer;
 
 /**
- * AccountUser Class Doc Comment
+ * PedidoImportarPedidoRequest Class Doc Comment
  *
  * @category Class
  * @package  AgendarEntrega\Pedido
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AccountUser implements ModelInterface, ArrayAccess
+class PedidoImportarPedidoRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class AccountUser implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'accountUser';
+    protected static $swaggerModelName = 'pedidoImportarPedidoRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,12 +57,15 @@ class AccountUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'uuid' => 'string',
-        'username' => 'string',
-        'email' => 'string',
-        'createdAt' => 'string',
-        'type' => '\AgendarEntrega\Pedido\Model\AccountUserType',
-        'authenticationMethod' => '\AgendarEntrega\Pedido\Model\UserAuthenticationMethod'
+        'codigo' => 'string',
+        'comprador' => '\AgendarEntrega\Pedido\Model\ImportarPedidoRequestComprador',
+        'fornecedor' => '\AgendarEntrega\Pedido\Model\ImportarPedidoRequestEmpresa',
+        'emitente' => '\AgendarEntrega\Pedido\Model\ImportarPedidoRequestEmpresa',
+        'destinatario' => '\AgendarEntrega\Pedido\Model\ImportarPedidoRequestEmpresa',
+        'dataEmissao' => 'string',
+        'observacoes' => 'string',
+        'entrega' => '\AgendarEntrega\Pedido\Model\PedidoEntrega',
+        'status' => '\AgendarEntrega\Pedido\Model\PedidoStatusPedido'
     ];
 
     /**
@@ -71,12 +74,15 @@ class AccountUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'uuid' => null,
-        'username' => null,
-        'email' => null,
-        'createdAt' => 'int64',
-        'type' => null,
-        'authenticationMethod' => null
+        'codigo' => null,
+        'comprador' => null,
+        'fornecedor' => null,
+        'emitente' => null,
+        'destinatario' => null,
+        'dataEmissao' => null,
+        'observacoes' => null,
+        'entrega' => null,
+        'status' => null
     ];
 
     /**
@@ -106,12 +112,15 @@ class AccountUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'uuid' => 'uuid',
-        'username' => 'username',
-        'email' => 'email',
-        'createdAt' => 'createdAt',
-        'type' => 'type',
-        'authenticationMethod' => 'authenticationMethod'
+        'codigo' => 'codigo',
+        'comprador' => 'comprador',
+        'fornecedor' => 'fornecedor',
+        'emitente' => 'emitente',
+        'destinatario' => 'destinatario',
+        'dataEmissao' => 'dataEmissao',
+        'observacoes' => 'observacoes',
+        'entrega' => 'entrega',
+        'status' => 'status'
     ];
 
     /**
@@ -120,12 +129,15 @@ class AccountUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'uuid' => 'setUuid',
-        'username' => 'setUsername',
-        'email' => 'setEmail',
-        'createdAt' => 'setCreatedAt',
-        'type' => 'setType',
-        'authenticationMethod' => 'setAuthenticationMethod'
+        'codigo' => 'setCodigo',
+        'comprador' => 'setComprador',
+        'fornecedor' => 'setFornecedor',
+        'emitente' => 'setEmitente',
+        'destinatario' => 'setDestinatario',
+        'dataEmissao' => 'setDataEmissao',
+        'observacoes' => 'setObservacoes',
+        'entrega' => 'setEntrega',
+        'status' => 'setStatus'
     ];
 
     /**
@@ -134,12 +146,15 @@ class AccountUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'uuid' => 'getUuid',
-        'username' => 'getUsername',
-        'email' => 'getEmail',
-        'createdAt' => 'getCreatedAt',
-        'type' => 'getType',
-        'authenticationMethod' => 'getAuthenticationMethod'
+        'codigo' => 'getCodigo',
+        'comprador' => 'getComprador',
+        'fornecedor' => 'getFornecedor',
+        'emitente' => 'getEmitente',
+        'destinatario' => 'getDestinatario',
+        'dataEmissao' => 'getDataEmissao',
+        'observacoes' => 'getObservacoes',
+        'entrega' => 'getEntrega',
+        'status' => 'getStatus'
     ];
 
     /**
@@ -202,12 +217,15 @@ class AccountUser implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
-        $this->container['username'] = isset($data['username']) ? $data['username'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['authenticationMethod'] = isset($data['authenticationMethod']) ? $data['authenticationMethod'] : null;
+        $this->container['codigo'] = isset($data['codigo']) ? $data['codigo'] : null;
+        $this->container['comprador'] = isset($data['comprador']) ? $data['comprador'] : null;
+        $this->container['fornecedor'] = isset($data['fornecedor']) ? $data['fornecedor'] : null;
+        $this->container['emitente'] = isset($data['emitente']) ? $data['emitente'] : null;
+        $this->container['destinatario'] = isset($data['destinatario']) ? $data['destinatario'] : null;
+        $this->container['dataEmissao'] = isset($data['dataEmissao']) ? $data['dataEmissao'] : null;
+        $this->container['observacoes'] = isset($data['observacoes']) ? $data['observacoes'] : null;
+        $this->container['entrega'] = isset($data['entrega']) ? $data['entrega'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -235,145 +253,217 @@ class AccountUser implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets uuid
+     * Gets codigo
      *
      * @return string
      */
-    public function getUuid()
+    public function getCodigo()
     {
-        return $this->container['uuid'];
+        return $this->container['codigo'];
     }
 
     /**
-     * Sets uuid
+     * Sets codigo
      *
-     * @param string $uuid uuid
+     * @param string $codigo codigo
      *
      * @return $this
      */
-    public function setUuid($uuid)
+    public function setCodigo($codigo)
     {
-        $this->container['uuid'] = $uuid;
+        $this->container['codigo'] = $codigo;
 
         return $this;
     }
 
     /**
-     * Gets username
+     * Gets comprador
+     *
+     * @return \AgendarEntrega\Pedido\Model\ImportarPedidoRequestComprador
+     */
+    public function getComprador()
+    {
+        return $this->container['comprador'];
+    }
+
+    /**
+     * Sets comprador
+     *
+     * @param \AgendarEntrega\Pedido\Model\ImportarPedidoRequestComprador $comprador comprador
+     *
+     * @return $this
+     */
+    public function setComprador($comprador)
+    {
+        $this->container['comprador'] = $comprador;
+
+        return $this;
+    }
+
+    /**
+     * Gets fornecedor
+     *
+     * @return \AgendarEntrega\Pedido\Model\ImportarPedidoRequestEmpresa
+     */
+    public function getFornecedor()
+    {
+        return $this->container['fornecedor'];
+    }
+
+    /**
+     * Sets fornecedor
+     *
+     * @param \AgendarEntrega\Pedido\Model\ImportarPedidoRequestEmpresa $fornecedor fornecedor
+     *
+     * @return $this
+     */
+    public function setFornecedor($fornecedor)
+    {
+        $this->container['fornecedor'] = $fornecedor;
+
+        return $this;
+    }
+
+    /**
+     * Gets emitente
+     *
+     * @return \AgendarEntrega\Pedido\Model\ImportarPedidoRequestEmpresa
+     */
+    public function getEmitente()
+    {
+        return $this->container['emitente'];
+    }
+
+    /**
+     * Sets emitente
+     *
+     * @param \AgendarEntrega\Pedido\Model\ImportarPedidoRequestEmpresa $emitente emitente
+     *
+     * @return $this
+     */
+    public function setEmitente($emitente)
+    {
+        $this->container['emitente'] = $emitente;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinatario
+     *
+     * @return \AgendarEntrega\Pedido\Model\ImportarPedidoRequestEmpresa
+     */
+    public function getDestinatario()
+    {
+        return $this->container['destinatario'];
+    }
+
+    /**
+     * Sets destinatario
+     *
+     * @param \AgendarEntrega\Pedido\Model\ImportarPedidoRequestEmpresa $destinatario destinatario
+     *
+     * @return $this
+     */
+    public function setDestinatario($destinatario)
+    {
+        $this->container['destinatario'] = $destinatario;
+
+        return $this;
+    }
+
+    /**
+     * Gets dataEmissao
      *
      * @return string
      */
-    public function getUsername()
+    public function getDataEmissao()
     {
-        return $this->container['username'];
+        return $this->container['dataEmissao'];
     }
 
     /**
-     * Sets username
+     * Sets dataEmissao
      *
-     * @param string $username username
+     * @param string $dataEmissao dataEmissao
      *
      * @return $this
      */
-    public function setUsername($username)
+    public function setDataEmissao($dataEmissao)
     {
-        $this->container['username'] = $username;
+        $this->container['dataEmissao'] = $dataEmissao;
 
         return $this;
     }
 
     /**
-     * Gets email
+     * Gets observacoes
      *
      * @return string
      */
-    public function getEmail()
+    public function getObservacoes()
     {
-        return $this->container['email'];
+        return $this->container['observacoes'];
     }
 
     /**
-     * Sets email
+     * Sets observacoes
      *
-     * @param string $email email
+     * @param string $observacoes observacoes
      *
      * @return $this
      */
-    public function setEmail($email)
+    public function setObservacoes($observacoes)
     {
-        $this->container['email'] = $email;
+        $this->container['observacoes'] = $observacoes;
 
         return $this;
     }
 
     /**
-     * Gets createdAt
+     * Gets entrega
      *
-     * @return string
+     * @return \AgendarEntrega\Pedido\Model\PedidoEntrega
      */
-    public function getCreatedAt()
+    public function getEntrega()
     {
-        return $this->container['createdAt'];
+        return $this->container['entrega'];
     }
 
     /**
-     * Sets createdAt
+     * Sets entrega
      *
-     * @param string $createdAt createdAt
+     * @param \AgendarEntrega\Pedido\Model\PedidoEntrega $entrega entrega
      *
      * @return $this
      */
-    public function setCreatedAt($createdAt)
+    public function setEntrega($entrega)
     {
-        $this->container['createdAt'] = $createdAt;
+        $this->container['entrega'] = $entrega;
 
         return $this;
     }
 
     /**
-     * Gets type
+     * Gets status
      *
-     * @return \AgendarEntrega\Pedido\Model\AccountUserType
+     * @return \AgendarEntrega\Pedido\Model\PedidoStatusPedido
      */
-    public function getType()
+    public function getStatus()
     {
-        return $this->container['type'];
+        return $this->container['status'];
     }
 
     /**
-     * Sets type
+     * Sets status
      *
-     * @param \AgendarEntrega\Pedido\Model\AccountUserType $type type
+     * @param \AgendarEntrega\Pedido\Model\PedidoStatusPedido $status status
      *
      * @return $this
      */
-    public function setType($type)
+    public function setStatus($status)
     {
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets authenticationMethod
-     *
-     * @return \AgendarEntrega\Pedido\Model\UserAuthenticationMethod
-     */
-    public function getAuthenticationMethod()
-    {
-        return $this->container['authenticationMethod'];
-    }
-
-    /**
-     * Sets authenticationMethod
-     *
-     * @param \AgendarEntrega\Pedido\Model\UserAuthenticationMethod $authenticationMethod authenticationMethod
-     *
-     * @return $this
-     */
-    public function setAuthenticationMethod($authenticationMethod)
-    {
-        $this->container['authenticationMethod'] = $authenticationMethod;
+        $this->container['status'] = $status;
 
         return $this;
     }
